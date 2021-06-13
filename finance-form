@@ -1,0 +1,534 @@
+Skip to content
+Search or jump to…
+
+Pull requests
+Issues
+Marketplace
+Explore
+ 
+@anujbarave99 
+prgayake
+/
+ECellweb
+1
+00
+Code
+Issues
+Pull requests
+Actions
+Projects
+Wiki
+Security
+Insights
+ECellweb/views/finance.ejs
+@prgayake
+prgayake 1.5 (13 June)
+Latest commit 5cb4160 6 hours ago
+ History
+ 1 contributor
+543 lines (412 sloc)  16.1 KB
+  
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <!-- CSS only -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
+  <!-- JavaScript Bundle with Popper -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4"
+    crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@300&display=swap" rel="stylesheet">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.0/jquery.validate.min.js"></script>
+
+
+  <!--     link for icons      -->
+  <script defer src="/your-path-to-fontawesome/js/all.js"></script>
+  <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
+    integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
+
+  <style>
+    #l1 {
+      margin-left: 30px;
+    }
+    #l2 {
+      font-size: 1.3rem;
+      color: #487905;
+    }
+    #l2:hover {
+      text-decoration: underline;
+      cursor: pointer;
+    }
+    .hyperlink {
+      width: 50%;
+      position: relative;
+      left: 550px;
+    }
+    #l4 {
+      margin-bottom: 20px;
+      box-shadow: 5px 10px 8px 10px #888888;
+      border-radius: 8px;
+      padding: 20px;
+      ;
+      margin: 5px;
+    }
+    #l8 {
+      margin-top: 20px;
+      margin-bottom: 20px;
+      box-shadow: 5px 10px 8px 10px #888888;
+      border-radius: 8px;
+      padding: 20px;
+    }
+    .footer-clean {
+      padding: 50px 0;
+      background-color: #fff;
+      color: #4b4c4d;
+    }
+    .l9 {
+      font-family: 'Ubuntu', sans-serif;
+    }
+    .footer-clean h3 {
+      margin-top: 0;
+      margin-bottom: 12px;
+      font-weight: bold;
+      font-size: 16px;
+    }
+    .footer-clean ul {
+      padding: 0;
+      list-style: none;
+      line-height: 1.6;
+      font-size: 14px;
+      margin-bottom: 0;
+    }
+    .footer-clean ul a {
+      color: inherit;
+      text-decoration: none;
+      opacity: 0.8;
+    }
+    .footer-clean ul a:hover {
+      opacity: 1;
+    }
+    .footer-clean .item.social {
+      text-align: right;
+    }
+    @media (max-width:767px) {
+      .footer-clean .item {
+        text-align: center;
+        padding-bottom: 20px;
+      }
+    }
+    @media (max-width: 768px) {
+      .footer-clean .item.social {
+        text-align: center;
+      }
+    }
+    .footer-clean .item.social>a {
+      font-size: 24px;
+      width: 40px;
+      height: 40px;
+      line-height: 40px;
+      display: inline-block;
+      text-align: center;
+      border-radius: 50%;
+      border: 1px solid #ccc;
+      margin-left: 10px;
+      margin-top: 22px;
+      color: inherit;
+      opacity: 0.75;
+    }
+    .footer-clean .item.social>a:hover {
+      opacity: 0.9;
+    }
+    @media (max-width:991px) {
+      .footer-clean .item.social>a {
+        margin-top: 40px;
+      }
+    }
+    @media (max-width:767px) {
+      .footer-clean .item.social>a {
+        margin-top: 10px;
+      }
+    }
+    .footer-clean .copyright {
+      margin-top: 14px;
+      margin-bottom: 0;
+      font-size: 13px;
+      opacity: 0.6;
+    }
+    .responsive {
+      max-width: 100%;
+      height: auto;
+    }
+    body {
+      margin: 0;
+      font-family: Arial
+    }
+    #l6 {
+      display: block;
+      margin-left: auto;
+      margin-right: auto;
+    }
+    #l7 {
+      position: relative;
+      bottom: 180px;
+      border-radius: 5px;
+      ;
+    }
+    #c1 {
+      border: 2px solid black;
+      padding: 30px;
+      border-radius: 8px;
+      box-shadow: 5px 10px 8px 10px #ece9e9;
+    }
+    #btn1 {
+      margin: 4px;
+    }
+    #a1 {
+      width: 15px;
+      height: 15px;
+    }
+    #req1 {
+      color: red;
+      font-size: larger;
+    }
+    .container-fluid {
+      padding: 1% 5%;
+    }
+    .navbar {
+      padding: 0 1rem 0 1rem;
+      margin-top: 10px;
+      ;
+      margin-bottom: 1rem;
+      border-radius: 8px;
+    }
+    .nav-item {
+      padding: 0 18px;
+    }
+    .nav-link {
+      font-size: 1.2rem;
+      font-family: 'Poppins', sans-serif;
+    }
+    .nav-link:hover {
+      border-bottom: 4px solid #ff4584;
+    }
+    .nav-link:active {
+      border-bottom: 4px solid #ff4584;
+    }
+    #l10 {
+      margin-left: 50px;
+    }
+    .icons {
+      margin: 1px 5px 1px 5px;
+      color: #607d8b;
+    }
+    .icons:hover {
+      color: #ff4c68;
+    }
+    .a3 {
+      margin-top: 10px;
+    }
+    #a2 {
+      width: 30px;
+      height: 30px;
+      margin: 5px;
+    }
+  </style>
+
+</head>
+
+<body>
+
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <a class="navbar-brand" href="/"><img src="images/logo.jpg" alt=""></a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+      aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav ms-auto">
+        <li class="nav-item">
+          <a class="nav-link" href="">About Us</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/profile">Profile</a>
+        </li>
+      </ul>
+    </div>
+  </nav>
+
+
+
+  <!-- Navbar -->
+
+
+
+  <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+      aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav ">
+        <li class="nav-item">
+          <a class="nav-link" id="l10" href="">Personal</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" id="l10" href="/startup">Basic</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" id="l10" href="/team">Team</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" id="l10" href="">IP</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link " id="l10" href="/Businessmodel">Business Model</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link active" id="l10" href="/finance">Financials</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" id="l10" href="/Upload_form">Uploads</a>
+        </li>
+
+      </ul>
+    </div>
+  </nav>
+
+
+  <!--        start of form           -->
+  <div class="section" style="padding-top:20px; padding-bottom:10px; background:#ffffff;"></div>
+
+  <div class="container" id="c1">
+      <h6 class="display-6">Financials</h6>
+    <br>
+
+    <form action="/finance" method="POST"  class="row g-3 needs-validation novalidate" id="basic-form">
+
+      <div class="col-md-6">
+        <label for="fUniquenessFactor" class="form-label">Maximum Turnover of Any of the Previous Three Financial Years</label><span id="req1">*</span>
+        <a data-bs-toggle="tooltip" data-bs-placement="top"
+          title="Mention amount of funds available."><img
+            src="info.png" class="info-icon" id="a1" align="info"> </a>
+            <select name="max_turnover" class="form-select" aria-label="Default select example" required>
+              <option value="" class="" selected="selected">-- Select an option--</option><option label="Less than 50 lakh" value="Less than 50 lakh">Less than 50 lakh</option><option label="Between 50 lakh &amp; 1 Cr" value="Between 50 lakh &amp; 1 Cr">Between 50 lakh &amp; 1 Cr</option><option label="Between 1 Cr &amp; 5 Cr" value="Between 1 Cr &amp; 5 Cr">Between 1 Cr &amp; 5 Cr</option><option label="Between 5 Cr &amp; 10 Cr" value="Between 5 Cr &amp; 10 Cr">Between 5 Cr &amp; 10 Cr</option><option label="Between 10 Cr &amp; 25 Cr" value="Between 10 Cr &amp; 25 Cr">Between 10 Cr &amp; 25 Cr</option><option label="Between 25-100 Crore" value="Between 25-100 Crore">Between 25-100 Crore</option><option label="Over 100 Crore" value="number:6">Over 100 Crore</option></select>
+
+      </div>
+
+      <div class="col-md-6">
+        <label for="fKeyPartners" class="form-label">What is the Startup’s Current Funding Status?</label><span id="req1">*</span>
+        <a data-bs-toggle="tooltip" data-bs-placement="top" title="Specify last source -Name of firm/invester"><img src="info.png"
+            class="info-icon" id="a1" align="info"> </a>
+      
+        <select name="current_funding" class="form-select" aria-label="Default select example" required>
+          <option value="" class="" selected="selected">-- Select an option--</option><option label="Equity" value="Equity">Equity</option><option label="Debt" value="Debt">Debt</option><option label="Awards" value="Awards">Awards</option><option label="Bootstrapped" value="Bootstrapped">Bootstrapped</option></select>
+      </div>
+
+      <div class="col-md-12">
+        <label for="fCostStructure" class="form-label">Total Funds Received Since Incorporation</label>
+        
+            <select name="total_funds" class="form-select" aria-label="Default select example" >
+              <option value="" class="" selected="selected">-- Select an option--</option><option label="0 To 1 Cr" value="0 To 1 Cr">0 To 1 Cr</option><option label="1 To 3 Cr" value="1 To 3 Cr">1 To 3 Cr</option><option label="3 To 10 Cr" value="3 To 10 Cr">3 To 10 Cr</option><option label="Above 10 Cr" value="Above 10 Cr">Above 10 Cr</option></select>
+
+      </div>
+      <br>
+      <hr>
+
+      <p><b>Financial Details of last 3 Years (if any)</b>
+     <a data-bs-toggle="tooltip" data-bs-placement="top" title="Financial Details like Balance Sheet / Audit Statement (if any)"><img src="info.png"
+        class="info-icon" id="a1" align="info"> </a></p>
+
+      <div class="row g-3">
+
+
+        <div class=" col-md-4">
+
+          <label for="inputPassword4" class="form-label">Financial Year</label>
+          <input name="Financial_year" type="text" class="form-control" id="inputEmail4" >
+
+
+        </div>
+        <div class=" col-md-4">
+
+          <label for="inputPassword4" class="form-label">Audited Financial Numbers(in INR)</label>
+          <input name="Audited_fn" type="text" class="form-control" id="inputEmail4">
+
+
+        </div>
+       
+        <div class=" col-md-4">
+          <label for="inputPassword4" class="form-label">Upload Proof(Audited statement from CA)</label>
+          <input class="form-control" type="file" id="formFile" >
+
+
+        </div>
+
+        <div class="field_wrapper">
+          <div>
+
+            <a href="javascript:void(0);" class="add_button" title="Add field"><img src="add.png" id="a2"></a>
+          </div>
+        </div>
+      </div>
+       
+      <script type="text/javascript">
+      
+        $(document).ready(function () {
+          var maxField = 10; //Input fields increment limitation
+          var addButton = $('.add_button'); //Add button selector
+          var wrapper = $('.field_wrapper'); //Input field wrapper
+          var fieldHTML = '<div><div class="row"><div class=" col-md-4 a3"><input type="text" class="form-control" id="inputEmail4"></div><div class=" col-md-4 a3"><input type="text" class="form-control" id="inputEmail4"></div><div class=" col-md-4 a3"><input class="form-control" type="file" id="formFile" ></div><a href="javascript:void(0);" class="remove_button"><img src="cross.jpg" id="a2"></a></div></div>'; //New input field html 
+          var x = 1; //Initial field counter is 1
+          //Once add button is clicked
+          $(addButton).click(function () {
+            //Check maximum number of input fields
+            if (x < maxField) {
+              x++; //Increment field counter
+              $(wrapper).append(fieldHTML); //Add field html
+            }
+          });
+          //Once remove button is clicked
+          $(wrapper).on('click', '.remove_button', function (e) {
+            e.preventDefault();
+            $(this).parent('div').remove(); //Remove field html
+            x--; //Decrement field counter
+          });
+        });
+      </script>
+
+ <div class="col-md-12">
+
+          <button type="submit" id="btn1" class="btn btn-primary">Submit</button>
+
+
+        </div>
+      </div>
+    </form>
+  </div>
+
+  <!--                    end of form                      -->
+  <br><br>
+  <hr>
+
+
+
+  <!-- End Subscribe & Social Links Widget -->
+
+  <!-- Start Copyright -->
+  <div class="footer-clean">
+    <footer class="l9">
+      <div class="container">
+        <div class="row justify-content-center">
+          <div class="col-sm-4 col-md-3 item">
+            <h3>Explore</h3>
+            <ul>
+              <li><a href="https://mitaoe.ac.in/opportunities.php">CAREERS </a></li>
+              <li><a href="https://alumni.mitaoe.ac.in/" target="_blank">ALUMNI</a></li>
+              <li><a href="https://mitaoe.ac.in/contact-us.php">CONTACT</a></li>
+
+              <li><a href="https://mitaoe.ac.in/blog.php">BLOG</a></li>
+            </ul>
+          </div>
+          <div class="col-sm-4 col-md-3 item">
+            <h3>IMP Links</h3>
+            <ul>
+              <li><a href="https://mitaoe.ac.in/mitaoe-nirf.php">NIRF</a></li>
+              <li><a href="https://mitaoe.ac.in/mandatory-disclosure.php">MANDATORY DISCLOSURE</a></li>i
+              <li><a href="https://mitaoe.ac.in/mitaoe-downloads.php">DOWNLOADS</a></li>
+              <li><a href="https://mitaoe.ac.in/">READ MORE</a></li>
+            </ul>
+          </div>
+
+          <div class="col-sm-4 col-md-3 item">
+            <h3>IMP Links</h3>
+            <ul>
+              <li><a href="https://mitaoe.ac.in/mitaoe-quality-assurance.php">IQAC</a></li>
+
+
+              <li><a href="https://mitaoe.ac.in/mitaoe-statutory-compliance.php">STATUTORY COMPLIANCE</a></li>
+
+
+              <li><a href="https://mitaoe.ac.in/mitaoe-committees.php">GRIEVANCE REDRESSAL</a></li>
+            </ul>
+          </div>
+
+          <div class="col-lg-3 item social">
+            <div class="socials">
+              <a target="_blank" href="https://www.facebook.com/MITAOEOfficial/">
+                <!-- <img src="face.png" width="50" height="50"> -->
+                <i class="fab fa-facebook fa-3x icons"></i>
+              </a>
+              <a target="_blank" href="https://www.youtube.com/channel/UCL4DWs9R4irwWUTFg8BYsOQ">
+                <!-- <img src="you.png" width="50" height="50"> -->
+                <i class="fab fa-youtube fa-3x icons"></i>
+              </a>
+              <a target="_blank" href="https://twitter.com/MITAOE">
+                <!-- <img src="twi.png" width="50" height="50"> -->
+                <i class="fab fa-twitter fa-3x icons"></i>
+              </a>
+              <a target="_blank" href="https://www.instagram.com/mitacademyofengineering/" width="50" height="50">
+                <i class="fab fa-instagram fa-3x icons"></i>
+              </a>
+              <a target="_blank" href="https://www.linkedin.com/company/mit-academy-of-engineering/">
+                <!-- <img src="in.png" width="50" height="40"> -->
+                <i class="fab fa-linkedin-in fa-3x icons"></i>
+              </a>
+
+
+
+              <!-- End Copyright -->
+
+
+
+              <!-- </div>
+                      <p class="copyright">Company Name © 2018</p>
+                  </div> -->
+
+            </div>
+          </div>
+    </footer>
+  </div>
+
+
+  <!-- End Footer -->
+
+  <!-- End Container -->
+
+  <!-- Go To Top Link -->
+
+
+  <script>
+    $(document).ready(function () {
+      $("#basic-form").validate();
+    });
+  </script>
+
+
+</body>
+
+</html>
+
+
+
+© 2021 GitHub, Inc.
+Terms
+Privacy
+Security
+Status
+Docs
+Contact GitHub
+Pricing
+API
+Training
+Blog
+About
+Loading complete
