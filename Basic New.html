@@ -1,0 +1,841 @@
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <!-- CSS only -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
+  <!-- JavaScript Bundle with Popper -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4"
+    crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@300&display=swap" rel="stylesheet">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.0/jquery.validate.min.js"></script>
+
+  <style>
+    #l1 {
+      margin-left: 30px;
+    }
+
+    #l2 {
+
+      font-size: 1.3rem;
+      color: #487905;
+    }
+
+    #l2:hover {
+      text-decoration: underline;
+      cursor: pointer;
+    }
+
+    .hyperlink {
+      width: 50%;
+      position: relative;
+      left: 550px;
+
+    }
+    .info{
+      margin-top: 20px;
+      margin-bottom: 20px;
+      color:red;
+      font-size:0.9rem;
+    }
+
+    #l4 {
+
+      margin-bottom: 20px;
+      box-shadow: 5px 10px 8px 10px #888888;
+      border-radius: 8px;
+      padding: 20px;
+      ;
+      margin: 5px;
+    }
+
+    #l8 {
+
+      margin-top: 20px;
+      margin-bottom: 20px;
+      box-shadow: 5px 10px 8px 10px #888888;
+      border-radius: 8px;
+      padding: 20px;
+
+
+    }
+
+    .footer-clean {
+      padding: 50px 0;
+      background-color: #fff;
+      color: #4b4c4d;
+    }
+
+    .l9 {
+      font-family: 'Ubuntu', sans-serif;
+    }
+
+    #a2 {
+      width: 30px;
+      height: 30px;
+      margin: 5px;
+    }
+
+    .footer-clean h3 {
+      margin-top: 0;
+      margin-bottom: 12px;
+      font-weight: bold;
+      font-size: 16px;
+    }
+
+    .footer-clean ul {
+      padding: 0;
+      list-style: none;
+      line-height: 1.6;
+      font-size: 14px;
+      margin-bottom: 0;
+    }
+
+    .footer-clean ul a {
+      color: inherit;
+      text-decoration: none;
+      opacity: 0.8;
+    }
+
+    .footer-clean ul a:hover {
+      opacity: 1;
+    }
+
+    .footer-clean .item.social {
+      text-align: right;
+    }
+
+    @media (max-width:767px) {
+      .footer-clean .item {
+        text-align: center;
+        padding-bottom: 20px;
+      }
+    }
+
+    @media (max-width: 768px) {
+      .footer-clean .item.social {
+        text-align: center;
+      }
+    }
+
+    .footer-clean .item.social>a {
+      font-size: 24px;
+      width: 40px;
+      height: 40px;
+      line-height: 40px;
+      display: inline-block;
+      text-align: center;
+      border-radius: 50%;
+      border: 1px solid #ccc;
+      margin-left: 10px;
+      margin-top: 22px;
+      color: inherit;
+      opacity: 0.75;
+    }
+
+    .footer-clean .item.social>a:hover {
+      opacity: 0.9;
+    }
+
+    @media (max-width:991px) {
+      .footer-clean .item.social>a {
+        margin-top: 40px;
+      }
+    }
+
+    @media (max-width:767px) {
+      .footer-clean .item.social>a {
+        margin-top: 10px;
+      }
+    }
+
+    .footer-clean .copyright {
+      margin-top: 14px;
+      margin-bottom: 0;
+      font-size: 13px;
+      opacity: 0.6;
+    }
+
+    .responsive {
+      max-width: 100%;
+      height: auto;
+    }
+
+    body {
+      margin: 0;
+      font-family: Arial
+    }
+
+    #l6 {
+      display: block;
+      margin-left: auto;
+      margin-right: auto;
+
+    }
+
+    #l7 {
+      position: relative;
+      bottom: 180px;
+
+      border-radius: 5px;
+      ;
+    }
+
+    #c1 {
+      border: 2px solid black;
+      padding: 30px;
+      border-radius: 8px;
+      box-shadow: 5px 10px 8px 10px #ece9e9;
+    }
+
+    #btn1 {
+      margin: 4px;
+    }
+
+    #a1 {
+      width: 15px;
+      height: 15px;
+    }
+
+    #req1 {
+      color: red;
+      font-size: larger;
+    }
+
+    .container-fluid {
+      padding: 1% 5%;
+    }
+
+    .navbar {
+      padding: 0 1rem 0 1rem;
+      margin-top: 10px;
+      ;
+      margin-bottom: 1rem;
+      border-radius: 8px;
+
+    }
+
+    .nav-item {
+
+      padding: 0 18px;
+    }
+
+    .nav-link {
+      font-size: 1.2rem;
+      font-family: 'Poppins', sans-serif;
+    }
+
+    .nav-link:hover {
+
+      border-bottom: 4px solid #ff4584;
+    }
+
+    .nav-link:active {
+
+      border-bottom: 4px solid #ff4584;
+    }
+
+    #l10 {
+      margin-left: 50px;
+    }
+  </style>
+
+</head>
+
+<body>
+
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <a class="navbar-brand" href="/"><img src="images/logo.jpg" alt=""></a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+      aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav ms-auto">
+        <li class="nav-item">
+          <a class="nav-link" href="">About Us</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="">Profile</a>
+        </li>
+      </ul>
+    </div>
+  </nav>
+
+
+
+  <!-- Navbar -->
+
+
+
+  <nav class="navbar navbar-expand-lg navbar-light bg-light">
+
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+      aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav ">
+        <li class="nav-item">
+          <a class="nav-link " id="l10" href="">Personal</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link active" id="l10" href="startup">Basic</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" id="l10" href="/team">Team</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" id="l10" href="/ip_form">IP</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" id="l10" href="/Businessmodel">Business Model</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" id="l10" href="/finance">Financials</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" id="l10" href="/Upload_form">Uploads</a>
+        </li>
+
+      </ul>
+    </div>
+  </nav>
+
+  <div class="container" id="c1">
+    <div class="info">
+      <p> Note : Howering on <img src="info.png" class="info-icon" id="a1" align="info"> Symbol will Tell you More About the Given Field .</p>
+      <p> Note : Field with ( <span id="req1">*</span> ) Marked are the Required One .</p>
+    </div>
+    <h6 class="display-6">Basic</h6>
+    <br>
+    
+
+
+    <form action="/startup" method="POST" class="row g-3 needs-validation" id="basic-form">
+      <div class="col-md-6">
+        <label for="inputEmail4" class="form-label">Name of Startup / Organization</label><span id="req1">*</span>
+        <a data-bs-toggle="tooltip" data-bs-placement="top"
+          title="Please input the name of the organisation as mentioned in Registration Certificate"><img src="info.png"
+            class="info-icon" id="a1" align="info"> </a>
+
+        <input type="text" name="stratup_name" class="form-control" id="inputEmail4" required>
+      </div>
+      <div class="col-md-6">
+        <label for="inputPassword4" class="form-label">Product Name</label><span id="req1">*</span>
+        <a data-bs-toggle="tooltip" data-bs-placement="top" title="Name of Your Primary/Product Service"><img
+            src="info.png" class="info-icon" id="a1" align="info"> </a>
+        <input type="text" name="product_name" class="form-control" id="inputPassword4" required>
+
+      </div>
+      <div class="col-md-6">
+        <label for="inputAddress" class="form-label">Website</label>
+        <a data-bs-toggle="tooltip" data-bs-placement="top" title="URL of your website if applicable"><img
+            src="info.png" class="info-icon" id="a1" align="info"> </a>
+        <input type="text" name="startup_web" class="form-control" id="inputAddress" placeholder="1234 Main St">
+      </div>
+      <div class="col-md-6">
+        <label for="inputAddress2" class="form-label">Firm Registration Date</label><span id="req1">*</span>
+        <a data-bs-toggle="tooltip" data-bs-placement="top"
+          title="Select date from calender it should be mentioned in registration certificate"><img src="info.png"
+            class="info-icon" id="a1" align="info"> </a>
+        <input type="Date" name="fr_date" class="form-control" id="inputAddress2" required>
+      </div>
+      <div class="col-md-6">
+        <label for="inputAddress2" class="form-label">Is your Company Registered in Maharashtra ?</label>
+
+        <div class="form-check">
+          <input class="form-check-input" type="radio" name="flexRadioDefault" value="yes" id="flexRadioDefault1"
+            checked>
+          <label class="form-check-label" for="flexRadioDefault1">
+            Yes
+          </label>
+        </div>
+        <div class="form-check">
+          <input class="form-check-input" type="radio" name="flexRadioDefault" value="no" id="flexRadioDefault2">
+          <label class="form-check-label" for="flexRadioDefault2">
+            No
+          </label>
+        </div>
+      </div>
+      <!--   <div class="col-md-6">
+           
+                <label for="formFile" class="form-label">Upload Proof of being incorporated in Maharashtra</label>
+                <a data-bs-toggle="tooltip" data-bs-placement="top" title="Certificate of Incorporation, or Company registration with address, or MSME certificate"><img src="info.png" class="info-icon" id="a1" align="info"> </a>
+                <input class="form-control" name="upload1" type="file" id="formFile">
+              
+        </div> -->
+
+      <div class="col-12">
+        <label for="exampleFormControlTextarea1" class="form-label">Registered Company Address</label><span
+          id="req1">*</span>
+        <a data-bs-toggle="tooltip" data-bs-placement="top"
+          title="Provide your business address - building name, street/locality name, nearby landmark, any other relevant details"><img
+            src="info.png" class="info-icon" id="a1" align="info"> </a>
+        <textarea class="form-control" name="comp_address" id="exampleFormControlTextarea1" rows="2"
+          required></textarea>
+      </div>
+      <div class="col-4">
+        <label for="exampleFormControlTextarea1" class="form-label">State</label><span id="req1">*</span>
+        <a data-bs-toggle="tooltip" data-bs-placement="top" title="Select state where your business is established"><img
+            src="info.png" class="info-icon" id="a1" align="info"> </a>
+        <select class="form-select" name="state" aria-label="Default select example" required>
+          <option value="">Select State</option>
+          <option value="Andhra Pradesh">Andhra Pradesh</option>
+          <option value="Andaman and Nicobar Islands">Andaman and Nicobar Islands</option>
+          <option value="Arunachal Pradesh">Arunachal Pradesh</option>
+          <option value="Assam">Assam</option>
+          <option value="Bihar">Bihar</option>
+          <option value="Chandigarh">Chandigarh</option>
+          <option value="Chhattisgarh">Chhattisgarh</option>
+          <option value="Dadar and Nagar Haveli">Dadar and Nagar Haveli</option>
+          <option value="Daman and Diu">Daman and Diu</option>
+          <option value="Delhi">Delhi</option>
+          <option value="Lakshadweep">Lakshadweep</option>
+          <option value="Puducherry">Puducherry</option>
+          <option value="Goa">Goa</option>
+          <option value="Gujarat">Gujarat</option>
+          <option value="Haryana">Haryana</option>
+          <option value="Himachal Pradesh">Himachal Pradesh</option>
+          <option value="Jammu and Kashmir">Jammu and Kashmir</option>
+          <option value="Jharkhand">Jharkhand</option>
+          <option value="Karnataka">Karnataka</option>
+          <option value="Kerala">Kerala</option>
+          <option value="Madhya Pradesh">Madhya Pradesh</option>
+          <option value="Maharashtra">Maharashtra</option>
+          <option value="Manipur">Manipur</option>
+          <option value="Meghalaya">Meghalaya</option>
+          <option value="Mizoram">Mizoram</option>
+          <option value="Nagaland">Nagaland</option>
+          <option value="Odisha">Odisha</option>
+          <option value="Punjab">Punjab</option>
+          <option value="Rajasthan">Rajasthan</option>
+          <option value="Sikkim">Sikkim</option>
+          <option value="Tamil Nadu">Tamil Nadu</option>
+          <option value="Telangana">Telangana</option>
+          <option value="Tripura">Tripura</option>
+          <option value="Uttar Pradesh">Uttar Pradesh</option>
+          <option value="Uttarakhand">Uttarakhand</option>
+          <option value="West Bengal">West Bengal</option>
+        </select>
+      </div>
+      <div class="col-md-4">
+        <label for="inputEmail4" class="form-label">District</label><span id="req1">*</span>
+        <a data-bs-toggle="tooltip" data-bs-placement="top" title="District where business is established"><img
+            src="info.png" class="info-icon" id="a1" align="info"> </a>
+        <input type="text" name="district" class="form-control" id="inputEmail4" required>
+      </div>
+      <div class="col-md-4">
+        <label for="inputEmail4" class="form-label">City</label><span id="req1">*</span>
+        <a data-bs-toggle="tooltip" data-bs-placement="top" title="City where business is established"><img
+            src="info.png" class="info-icon" id="a1" align="info"> </a>
+        <input type="text" name="city" class="form-control" id="inputEmail4">
+      </div>
+
+      <div class="col-md-4">
+        <label for="inputEmail4" class="form-label">Business Model Type</label><span id="req1">*</span>
+
+        <select class="form-select" name="businesss_model" aria-label="Default select example" required>
+          <option value="">Open this select menu</option>
+          </option>
+          <option label="B2B" value="B2B">B2B</option>
+          <option label="B2C" value="B2C">B2C</option>
+          <option label="B2G" value="B2G">B2G</option>
+          <option label="OTHER" value="OTHER">OTHER</option>
+        </select>
+      </div>
+      <div class="col-md-4">
+        <label for="inputEmail4" class="form-label">Firm Type</label><span id="req1">*</span>
+
+        <select class="form-select" name="firm_type" aria-label="Default select example" required>
+          <option selected>Open this select menu</option>
+          <option label="Registered Partnership Firm" value="Registered Partnership Firm">Registered Partnership Firm
+          </option>
+          <option label="Limited Liability Partnership" value="Limited Liability Partnership">Limited Liability
+            Partnership</option>
+          <option label="Private Limited Company" value="Private Limited Company">Private Limited Company</option>
+          <option label="Sole Proprietorship" value="Sole Proprietorship">Sole Proprietorship</option>
+        </select>
+      </div>
+      <div class="col-md-4">
+        <label for="inputEmail4" class="form-label">Registration Number</label><span id="req1">*</span>
+        <a data-bs-toggle="tooltip" data-bs-placement="top" title="Company / Firm Registration Number"><img
+            src="info.png" class="info-icon" id="a1" align="info"> </a>
+        <input type="text" name="city" class="form-control" id="inputEmail4">
+      </div>
+
+      <div class="col-md-6">
+        <label for="inputEmail4" class="form-label">Startup Sector</label><span id="req1">*</span>
+        <a data-bs-toggle="tooltip" data-bs-placement="top"
+          title="Select Appropriate Sector Relevamt to your business "><img src="info.png" class="info-icon" id="a1"
+            align="info"> </a>
+        <select class="form-select" name="startup_sector" aria-label="Default select example" required>
+          <option value="">Open this select menu</option>
+          <option label="Agriculture" value="Agriculture">Agriculture</option>
+          <option label="Biotechnology" value="Biotechnology">Biotechnology</option>
+          <option label="Clean Energy" value="Clean Energy">Clean Energy</option>
+          <option label="Cyber Security" value="Cyber Security">Cyber Security</option>
+          <option label="Education" value="Education">Education</option>
+          <option label="FinTech" value="FinTech">FinTech</option>
+          <option label="Governance" value="Governance">Governance</option>
+          <option label="Healthcare" value="Healthcare">Healthcare</option>
+          <option label="IT" value="IT">IT</option>
+          <option label="Miscellaneous" value="Miscellaneous">Miscellaneous</option>
+          <option label="Mobility" value="Mobility">Mobility</option>
+          <option label="Rural Development" value="Rural Development">Rural Development</option>
+          <option label="Skilling" value="Skilling">Skilling</option>
+          <option label="Smart Infra" value="Smart Infra">Smart Infra</option>
+          <option label="Social Development" value="Social Development">Social Development</option>
+          <option label="Sustainability (Air,Water &amp; Waste Management)"
+            value="Sustainability (Air,Water &amp; Waste Management)">Sustainability (Air,Water &amp; Waste Management)
+          </option>
+        </select>
+      </div>
+      <div class="col-md-6">
+        <label for="inputEmail4" class="form-label">Technology Used</label><span id="req1">*</span>
+        <a data-bs-toggle="tooltip" data-bs-placement="top" title="Input Major technologies you are working with"><img
+            src="info.png" class="info-icon" id="a1" align="info"> </a>
+        <input type="text" name="technology" class="form-control" id="inputEmail4" required>
+      </div>
+      <div class="col-6">
+        <label for="exampleFormControlTextarea1" class="form-label">Describe your Startup</label><span
+          id="req1">*</span>
+        <a data-bs-toggle="tooltip" data-bs-placement="top" title="Input Short Discription (max 255 Characters)"><img
+            src="info.png" class="info-icon" id="a1" align="info"> </a>
+        <textarea class="form-control" name="startup_desc" id="exampleFormControlTextarea1" rows="2"
+          required></textarea>
+      </div>
+      <!--        <div class="col-md-6">
+           
+            <label for="formFile" class="form-label">Upload your General Pitch Deck</label><span id="req1">*</span>
+            <a data-bs-toggle="tooltip" data-bs-placement="top" title="Tooltip on top"><img src="info.png" class="info-icon" id="a1" align="info"> </a>
+            <input class="form-control" name="upload2" type="file" id="formFile" required>
+          
+        </div> -->
+
+      <div class="col-6">
+        <label for="exampleFormControlTextarea1" class="form-label">Other</label>
+        <a data-bs-toggle="tooltip" data-bs-placement="top"
+          title="Additional Short Discription relevant to your business(max 255 Characters)"><img src="info.png"
+            class="info-icon" id="a1" align="info"> </a>
+        <textarea class="form-control" name="other" id="exampleFormControlTextarea1" rows="2"></textarea>
+      </div>
+      <div class="col-md-6">
+        <label for="inputEmail4" class="form-label">Team Size</label><span id="req1">*</span>
+        <a data-bs-toggle="tooltip" data-bs-placement="top" title="Total no od individual working in your business"><img
+            src="info.png" class="info-icon" id="a1" align="info"> </a>
+        <input type="number" name="team_size" class="form-control" id="inputEmail4" required>
+      </div>
+      <!--    <div class="col-md-6">
+           
+            <label for="formFile" class="form-label">Explainer Video</label>
+            <a data-bs-toggle="tooltip" data-bs-placement="top" title="Tooltip on top"><img src="info.png" class="info-icon" id="a1" align="info"> </a>
+            <input class="form-control" name="upload3" type="file" id="formFile" >
+          
+        </div>  -->
+      <div class="col-md-6">
+      </div>
+      <br>
+      <hr>
+      <br>
+      <div class="col-md-6">
+        <label for="inputEmail4" class="form-label">Awards / Achievments</label>
+        
+        <input type="text" name="awards" class="form-control" id="inputEmail4" >
+        <div class="field_wrapper">
+          <div>
+
+            <a href="javascript:void(0);" class="add_button" title="Add field"><img src="add.png" id="a2"></a>
+          </div>
+        </div>
+        <div class="col-md-6">
+        </div>
+        <script type="text/javascript">
+
+          $(document).ready(function () {
+            var maxField = 10; //Input fields increment limitation
+            var addButton = $('.add_button'); //Add button selector
+            var wrapper = $('.field_wrapper'); //Input field wrapper
+            var fieldHTML = '<div><div class="row"><div class=" col-md-12 a3"><input type="text" class="form-control"  name="name"  id="inputEmail4"></div><a href="javascript:void(0);" class="remove_button"><img src="cross.jpg" id="a2"></a></div></div>'; //New input field html 
+            var x = 1; //Initial field counter is 1
+            //Once add button is clicked
+            $(addButton).click(function () {
+              //Check maximum number of input fields
+              if (x < maxField) {
+                x++; //Increment field counter
+                $(wrapper).append(fieldHTML); //Add field html
+              }
+            });
+            //Once remove button is clicked
+            $(wrapper).on('click', '.remove_button', function (e) {
+              e.preventDefault();
+              $(this).parent('div').remove(); //Remove field html
+              x--; //Decrement field counter
+            });
+          });
+        </script>
+
+        <div class="col-md-6">
+          <br>
+          <label for="inputEmail4" class="form-label">How did you hear about us?</label><span id="req1">*</span>
+          <a data-bs-toggle="tooltip" data-bs-placement="top" title="Select appropriate source from where do you come to know about us"><img src="info.png"
+              class="info-icon" id="a1" align="info"> </a>
+          <select class="form-select" name="hear_about_us" aria-label="Default select example" required>
+            <option value="" translate="" class="ng-scope">Select Option</option>
+            <option value="Newspaper" translate="" class="ng-scope">Newspaper</option>
+            <option value="Facebook" translate="" class="ng-scope">Facebook</option>
+            <option value="Linkedin" translate="" class="ng-scope">Linkedin</option>
+            <option value="Twitter" translate="" class="ng-scope">Twitter</option>
+            <option value="Instagram">Instagram</option>
+            <option value="Whatsapp">Whatsapp</option>
+            <option value="Partner Email">Partner Email</option>
+            <option value="MSINS Email">MSINS Email</option>
+            <option value="Web Banners">Web Banners</option>
+            <option value="Yourstory Article">Yourstory Article</option>
+            <option value="Marketing Displays" translate="" class="ng-scope">Marketing Displays</option>
+            <option value="TV Ads" translate="" class="ng-scope">TV Ads</option>
+            <option value="Radio Ads" translate="" class="ng-scope">Radio Ads</option>
+            <option value="Events" translate="" class="ng-scope">Events</option>
+            <option value="Agni" translate="" class="ng-scope">Agni</option>
+            <option value="Other" translate="" class="ng-scope">Other</option>
+          </select>
+        </div>
+        <div class="col-md-6">
+        </div>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+        <div class="col-md-12">
+          
+          <br>
+          <label for="inputAddress2" class="form-label">Have you ever been an Incubatee?</label><span id="req1">*</span>
+          <a data-bs-toggle="tooltip" data-bs-placement="top" title="Please Input Organization Name as Mentioned in Registration Certificate"><img src="info.png"
+              class="info-icon" id="a1" align="info"> </a>
+          <label for="chkYes">
+            <input type="radio" id="chkYes" name="chk" onclick="ShowHideDiv()" />
+            Yes
+          </label>
+          <label for="chkNo">
+            <input type="radio" id="chkNo" name="chk" onclick="ShowHideDiv()" />
+            No
+          </label>
+
+        </div>
+        <div class="col-md-12 " id="dvtext" style="display: none">
+
+          <label for="fIpDescription" class="form-label">Please mention the name of the Incubator: [Max 255
+            characters]</label><span id="req1">*</span>
+          <textarea class="form-control" id="exampleFormControlTextarea1" rows="2" required></textarea>
+        </div>
+
+        <script>
+          function ShowHideDiv() {
+            var chkYes = document.getElementById("chkYes");
+            var dvtext = document.getElementById("dvtext");
+            dvtext.style.display = chkYes.checked ? "block" : "none";
+          }
+        </script>
+      </div>
+
+      <br>
+      <hr>
+      <br>
+      <h6 class="display-6">Bank Details</h6>
+      <div class="row">
+        <div class="col-md-6">
+          <label for="inputEmail4" class="form-label">Name of Account Holder</label>
+
+          <input type="text" name="acc_name" class="form-control" id="inputEmail4" required>
+        </div>
+        <div class="col-md-6">
+          <label for="inputEmail4" class="form-label">Account Number</label>
+
+          <input type="text" name="acc_no" class="form-control" id="inputEmail4" required>
+        </div>
+        <div class="col-md-6">
+          <label for="inputEmail4" class="form-label">Name of Bank</label>
+
+          <input type="text" name="bank_name" class="form-control" id="inputEmail4" required>
+        </div>
+        <div class="col-md-6">
+          <label for="inputEmail4" class="form-label">IFSC Code</label>
+
+          <input type="text" name="IFSC" class="form-control" id="inputEmail4" required>
+        </div>
+        <div class="col-md-6">
+          <label for="inputEmail4" class="form-label">Branch Name</label>
+
+          <input type="text" name="branch" class="form-control" id="inputEmail4" required>
+        </div>
+        <!--      <div class="col-md-6">
+           
+            <label for="formFile" class="form-label">Upload a Cancelled Cheque</label>
+            
+            <input class="form-control" name="upload4" type="file" id="formFile" required>
+          
+        </div>-->
+        <div class="col-md-8">
+        </div>
+        <div class="col-md-4">
+
+          <button type="submit" id="btn1" class="btn btn-primary">Submit</button>
+
+
+        </div>
+      </div>
+
+
+    </form>
+
+
+  </div>
+
+  <br><br>
+  <hr>
+  <!-- End Subscribe & Social Links Widget -->
+
+  <!-- Start Copyright -->
+  <div class="footer-clean">
+    <footer class="l9">
+      <div class="container">
+        <div class="row justify-content-center">
+          <div class="col-sm-4 col-md-3 item">
+            <h3>Explore</h3>
+            <ul>
+              <li><a href="https://mitaoe.ac.in/opportunities.php">CAREERS </a></li>
+              <li><a href="https://alumni.mitaoe.ac.in/" target="_blank">ALUMNI</a></li>
+              <li><a href="https://mitaoe.ac.in/contact-us.php">CONTACT</a></li>
+
+              <li><a href="https://mitaoe.ac.in/blog.php">BLOG</a></li>
+            </ul>
+          </div>
+          <div class="col-sm-4 col-md-3 item">
+            <h3>IMP Links</h3>
+            <ul>
+              <li><a href="https://mitaoe.ac.in/mitaoe-nirf.php">NIRF</a></li>
+              <li><a href="https://mitaoe.ac.in/mandatory-disclosure.php">MANDATORY DISCLOSURE</a></li>
+
+
+
+              <li><a href="https://mitaoe.ac.in/mitaoe-downloads.php">DOWNLOADS</a></li>
+              <li><a href="https://mitaoe.ac.in/">READ MORE</a></li>
+            </ul>
+          </div>
+
+          <div class="col-sm-4 col-md-3 item">
+            <h3>IMP Links</h3>
+            <ul>
+              <li><a href="https://mitaoe.ac.in/mitaoe-quality-assurance.php">IQAC</a></li>
+
+
+              <li><a href="https://mitaoe.ac.in/mitaoe-statutory-compliance.php">STATUTORY COMPLIANCE</a></li>
+
+
+              <li><a href="https://mitaoe.ac.in/mitaoe-committees.php">GRIEVANCE REDRESSAL</a></li>
+            </ul>
+          </div>
+          <div class="col-lg-3 item social">
+            <div class="socials">
+              <a target="_blank" href="https://www.facebook.com/MITAOEOfficial/">
+                <img src="face.png" width="50" height="50">
+              </a>
+              <a target="_blank" href="https://www.youtube.com/channel/UCL4DWs9R4irwWUTFg8BYsOQ">
+                <img src="you.png" width="50" height="50">
+              </a>
+              <a target="_blank" href="https://twitter.com/MITAOE">
+                <img src="twi.png" width="50" height="50">
+              </a>
+              <a target="_blank" href="https://www.instagram.com/mitacademyofengineering/" width="50" height="50">
+              </a>
+              <a target="_blank" href="https://www.linkedin.com/company/mit-academy-of-engineering/">
+                <img src="in.png" width="50" height="40">
+              </a>
+
+
+
+              <!-- End Copyright -->
+
+
+
+            </div>
+            <p class="copyright">Company Name © 2018</p>
+          </div>
+
+        </div>
+      </div>
+    </footer>
+  </div>
+
+
+
+  </footer>
+
+
+
+  <!-- End Footer -->
+  </div>
+  <!-- End Container -->
+
+  <!-- Go To Top Link -->
+  <a href="#" class="back-to-top"><i class="icon-up-open-1"></i></a>
+
+  <div id="loader">
+    <div class="spinner">
+      <div class="dot1"></div>
+      <div class="dot2"></div>
+    </div>
+  </div>
+  <script>
+    $(".projects-carousel").owlCarousel({
+      items: 4,
+      autoPlay: true
+    });
+  </script>
+  <script>
+    $(document).ready(function () {
+      $("#basic-form").validate();
+    });
+  </script>
+  <script type="text/javascript">
+    $(document).ready(function () {
+      $('input[type="radio"]').click(function () {
+        var inputValue = $(this).attr("value");
+        var targetBox = $("." + inputValue);
+        $(".selectt").not(targetBox).hide();
+        $(targetBox).show();
+      });
+    });
+  </script>
+
+
+</body>
+
+</html>
+<img src="images/info1.ce314eb3.png" class="info-icon" align="info">
+
+
+
+© 2021 GitHub, Inc.
+Terms
+Privacy
+Security
+Status
+Docs
+Contact GitHub
+Pricing
+API
+Training
+Blog
+About
+Loading complete
